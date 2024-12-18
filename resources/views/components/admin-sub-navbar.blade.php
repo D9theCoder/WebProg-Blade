@@ -1,0 +1,6 @@
+<div x-data="{ current: '{{ Route::currentRouteName() }}' }" class="flex justify-center space-x-8 py-3">
+    <a href="{{ route('profile.admin.index') }}" x-bind:class="{ 'text-indigo-400': current === 'profile.admin.index', 'text-black': current !== 'profile.admin.index' }" class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-white hover:bg-opacity-10 rounded-md">Dashboard</a>
+    <a href="{{ route('profile.admin.view_user_report') }}" x-bind:class="{ 'text-indigo-400': current === 'profile.admin.view_user_report', 'text-black': current !== 'profile.admin.view_user_report' }" class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-white hover:bg-opacity-10 rounded-md">User Report</a>
+    <a href="{{ route('profile.admin.view_create') }}" x-bind:class="{ 'text-indigo-400': current === 'profile.admin.view_create', 'text-black': current !== 'profile.admin.view_create' }" class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-white hover:bg-opacity-10 rounded-md">Create Account</a>
+    <a href="{{ route('profile.admin.view_feedback') }}" x-bind:class="{ 'text-indigo-400': current === 'profile.admin.view_feedback', 'text-black': current !== 'profile.admin.view_feedback' }" class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-white hover:bg-opacity-10 rounded-md">Feedback</a>
+</div>

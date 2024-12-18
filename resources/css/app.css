@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; /* Allow scrolling but hide scrollbar */
+  height: 100vh;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.mandatory-scroll-snapping::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-padding-top: 2rem; /* Adjust to the height of your navbar */
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh; 
+}
+
+html {
+  scroll-padding-top: 40rem; /* Adjust this to match your header's height */
+}
+
