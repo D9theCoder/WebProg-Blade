@@ -7,6 +7,10 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
+    // purge: [
+    //     "./src/pages/**/*.{js,ts,jsx,tsx}",
+    //     "./src/components/**/*.{js,ts,jsx,tsx}",
+    // ],
     theme: {
         extend: {
             fontFamily: {
@@ -21,4 +25,5 @@ export default {
         require("@tailwindcss/forms"),
         require('@tailwindcss/line-clamp'),
     ],
+    enabled: process.env.NODE_ENV === "production",
 };
